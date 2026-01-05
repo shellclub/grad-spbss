@@ -7,4 +7,4 @@ services:
     ports:
       - "8082:80"
     volumes:
-      - .:/var/www/html  # <--- ต้องมี "จุด" แล้วตามด้วย "โคลอน" แบบนี้เท่านั้นครับ
+      - .:/var/www/html
