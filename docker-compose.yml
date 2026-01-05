@@ -1,8 +1,10 @@
+version: '3.8'
 services:
   php-apache:
     image: php:8.2-apache
     container_name: grad-spbss-php-apache-1
-    volumes:
-      - .:/var/www/html  # ตรวจสอบว่ามีบรรทัดนี้ และจุดข้างหน้าต้องมีอยู่
+    restart: always
     ports:
       - "8082:80"
+    volumes:
+      - .:/var/www/html  # สำคัญ: ต้องมีจุด (.) นำหน้าโคลอน เพื่อบอกให้ดึงไฟล์จากปัจจุบันไปใส่ใน Container
